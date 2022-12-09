@@ -1,0 +1,18 @@
+$red: tomato;
+
+body {
+    background-color: $red;
+    p {
+    color: blue;
+    font-size: 22px;
+    &:hover {
+        font-size: 36px;
+    }
+}
+}
+
+
+h1 {
+    font-size: 18px;
+}
+
