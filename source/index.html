@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Sedona</title>
 </head>
-<body>
-        <h1>Hello world</h1>
+<body class="page-body">
+    <div class="site-wrapper">
+        <header class="main-header">
+            <a class="logo" href="#">
+                <img src="img/logo.svg" alt="Логотип компании" class="logo__icon" width="185" height="96">
+            </a>
+            <nav class="main-nav">
+                <input class="main-nav__control-input visually-hidden" type="checkbox" id="burger">
+                <label class="main-nav__control" for="burger">
+                    <span class="visually-hidden">Открыть меню / Закрыть меню</span>
+                    <span class="main-nav__burger"></span>
+                </label>
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item"><a class="site-list__link">Главная</a></li>
+                    <li class="site-list__item"><a class="site-list__link" href="#">Фото и видео</a></li>
+                    <li class="site-list__item"><a class="site-list__link" href="#">Форма Отзыва</a></li>
+                    <li class="site-list__item"><a class="site-list__link" href="https://www.htmlacademy.ru" target="_blank">HTML ACADEMY</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>    
 </body>
 </html>

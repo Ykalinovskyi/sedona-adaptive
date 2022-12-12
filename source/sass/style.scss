@@ -1,18 +1,59 @@
-$red: tomato;
+@import "vars";
 
-body {
-    background-color: $red;
-    p {
-    color: blue;
-    font-size: 22px;
-    &:hover {
-        font-size: 36px;
-    }
+@font-face {
+    font-family: "PT Sans";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  }
+@font-face {
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+  
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-
-h1 {
-    font-size: 18px;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
+.page-body {
+    margin: 0;
+    min-height: 100%;
+    background-color: $bg-color;
+    font-family: $font;
+}
+
+.site-wrapper {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 0 rgba($black, .20);
+}
+
+@import "blocks/main-header";
+@import "blocks/logo";
+@import "blocks/main-nav";
+@import "blocks/site-list";

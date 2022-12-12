@@ -29,12 +29,14 @@ export const styles = () => {
         ]))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
+        .pipe(browser.stream());
 }
 
 //Scripts
 const scripts = () => {
     return gulp.src('source/js/script.js')
     .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
 }
 
 //Images
