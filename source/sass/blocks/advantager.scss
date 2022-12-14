@@ -25,10 +25,11 @@
 
     @media(min-width: $tablet) {
         flex-direction: row;
+        justify-content: space-around;
     }
 }
 
-.advantager__card_double {
+.advantager__card_extend {
     background-color: $blue;
 }
 
@@ -47,7 +48,6 @@
     @media(min-width: $tablet) {
         padding-top: 60px;
         padding-bottom: 60px;
-        justify-content: space-between;
     }
     
     & .advantager__card-content {
@@ -60,6 +60,11 @@
 
         & .advantager__card-title {
             margin-top: 8px;
+
+            @media(min-width: $tablet) {
+                margin-top: 26px;
+                margin-bottom: 26px;
+            }
         }
 
         & .advantager__card-text {
@@ -70,22 +75,19 @@
         @media(min-width: $tablet) {
             display: flex;
             flex-direction: column;
+           
             align-items: center;
             text-align: center;
             margin-bottom: 0;
 
-            width: 200px;
-
-            & .advantager__card-text {
-                width: 178px;
-            }
+            width: 193px;
         }
     }
 }
 
 .advantager__card_modify-grey {
     background-color: $grey-l;
-    padding: 23px 20px 30px 18px;    
+    padding: 23px 20px 30px 18px; 
     
     & .advantager__card-content {
         padding: 0;
@@ -110,17 +112,28 @@
             padding-left: 33px;
             padding-right: 34px;
         }
+
         & .advantager__card-title {
-            width: 137px;
+            max-width: 159px;
         }
     }
 }
 
 .advantager__card-content {
     padding: 54px 22px 40px 16px;
+   
     @media(min-width: $tablet) {
         padding-top: 44px;
-        max-width: 400px;
+        flex-grow: 0;
+        max-width: 256px;
+        max-height: 256px;
+    }
+    @media(min-width: $desktop) {
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -132,6 +145,10 @@
     color: $white;
     font-weight: bold;
     text-transform: uppercase;
+    
+    @media(min-width: $tablet) {
+        font-size: 21px;
+    }
 }
 
 .advantager__card-title_black {
@@ -145,11 +162,17 @@
     font-weight: normal;
     color: $white;
     text-transform: uppercase;
+
 }
+
 
 .advantager__card-text {
     margin-top: 17px;
     margin-bottom: 0;
+
+    @media(min-width: $desktop) {
+        width: 290px;
+    }
 }
 
 .advantager__card-text_black {
