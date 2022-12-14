@@ -74,6 +74,12 @@
 #burger:checked + label + ul{
    display: block;
 }
+#burger:checked + label {
+    position: fixed;
+    top: 17px;
+    right: 20px;
+    z-index: 3;
+}
 
 #burger:checked + label span{
     background-color: $white;

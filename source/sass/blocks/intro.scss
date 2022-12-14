@@ -1,0 +1,41 @@
+.intro {
+    text-align: center;
+    padding: 32px 18px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width: $tablet) {
+        padding-top: 47px;
+        padding-bottom: 56px;
+    }
+}
+
+.intro__title {
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+    font-weight: bold;
+
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    width: 272px;
+
+    @media(min-width: $tablet) {
+        font-size: 21px;
+        width: 520px;
+    }
+}
+
+.intro__subtitle {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    color: $grey;
+
+    margin: 0;
+    text-transform: uppercase;
+}
