@@ -1,0 +1,46 @@
+.social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 40px;
+
+    @media(min-width: $tablet) {
+        margin-bottom: 0;
+    }
+}
+
+.social__item:not(:last-child) {
+    margin-right: 6px;
+}
+
+.social__link {
+    display: block;
+    padding: 17px 12px;
+    min-width: 48px;
+    min-height: 48px;
+    background-color: $blue;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    &:hover {
+        background-color: #669EC0;
+    }
+    &:active {
+        background-color: #5496BD;
+       
+        .social__icon {
+            opacity: .3;
+        }
+    }
+}
+
+.social__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}

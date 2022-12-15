@@ -1,0 +1,23 @@
+.developer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    color: $black;
+    
+
+    &:hover {
+        .developer__icon {
+            fill: #81B3D2;
+        }
+    }
+}
+
+.developer__icon {
+    margin-left: 15px;
+    transition: all .2s ease-in;
+}

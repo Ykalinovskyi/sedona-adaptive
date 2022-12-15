@@ -1,0 +1,12 @@
+.button {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: #e5e5e5;
+        color: $white;
+    }
+}

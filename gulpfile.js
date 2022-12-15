@@ -8,6 +8,7 @@ import rename from 'gulp-rename';
 import browser from 'browser-sync';
 import clean from 'gulp-clean';
 import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 import imagemin from 'gulp-imagemin';
 
 //HTML
@@ -51,6 +52,17 @@ const svg = () =>
     gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
+
+//Sprite
+const sprite = () => {
+    return gulp.src('source/img/icons/*.svg')
+        .pipe(svgo())
+        .pipe(svgstore({
+             inlineSvg: true
+         }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 
 //Copy
@@ -110,7 +122,8 @@ export const build = gulp.series (
         styles,
         html,
         scripts,
-        svg
+        svg,
+        sprite
     ),
     
 );
@@ -124,7 +137,8 @@ export default gulp.series(
         styles,
         html,
         scripts,
-        svg
+        svg,
+        sprite
     ),
     gulp.series (
         server,
